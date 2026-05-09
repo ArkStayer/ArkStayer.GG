@@ -1,0 +1,540 @@
+
+html {
+  scrollbar-color: #1e0343 #0e011f;
+  scrollbar-width: thin;
+}
+body {
+    background-color: #0e011f;
+    background-image: url("images/bg.png");
+    background-size: 99%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 15px 2px;
+    z-index: 500;
+    display: flex;
+}
+.topbarcontent {
+    display: flex;
+    align-items: center;
+}
+
+.topbarcontent li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.titlemsg {
+  user-select: none;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 80px;
+  text-align: center;
+  background: #00b7ff;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+  background-clip: text;
+  font-size: xx-large;
+  color: transparent;
+}
+.titlemsg2 {
+  user-select: none;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 80px;
+  text-align: center;
+  background: #00b7ff;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+  background-clip: text;
+  font-size: large;
+  color: transparent;
+}
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;    
+  height: 140px;
+  gap: 10px;         
+}
+.loginbtn67 {
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgb(238, 0, 56) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  position: absolute;
+  right: 10px;
+  top: 23px;
+  transition: all 0.5s;
+  user-select: none;
+
+}
+.loginbtn67:hover {
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgb(12, 238, 0) 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: xx-large;
+}
+.logintext {
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgb(12, 238, 0) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  transition: all 0.1s;
+  user-select: none;
+}
+.moneytext {
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgb(12, 238, 0) 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  position: absolute;  /* Changed from relative to absolute */
+  right: 250px;          /* Position on the left side */
+  top: 20px;    /* Same vertical position as logintext */
+  transition: all 0.1s;
+  user-select: none;
+}
+.logintext:hover {
+  background-clip: text;
+  color: transparent;
+  animation: infiniteRGB 3s linear infinite;
+  user-select: none;
+}
+.form {
+  padding: 12px;
+  margin: 8px 0;
+  border: 3px solid #00fff2;
+  border-radius: 4px;
+  background-color: #07000f;
+  color: #00b7ff;
+}
+
+.centered {
+  padding-left: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 800px;
+  z-index: 10;
+  transition: all 1s;
+}
+.logo2 {
+  padding-left: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  z-index: 10;
+  transition: all 1s;
+}
+
+.centered:hover {
+  padding-left: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 820px;
+  width: 820px;
+  z-index: 10;
+}
+.container2 {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;    
+  padding-bottom: 100px;   
+}
+.giveawaybtn {
+    border-color: #00b7ff;
+    background-color: #0e011f;
+    border-radius: 40px;
+    border-width: 3px;
+    padding: 15px 32px;
+    font-size: xx-large;
+    color: rgb(0, 217, 255);
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+.giveawaybtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 40px;
+    background-image: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.giveawaybtn:hover::before {
+    opacity: 1;
+}
+.font2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none;
+}
+.giveawaybtn:hover {
+    color: black;
+    border-width: 0px;
+    cursor: pointer;
+}
+.font {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font3 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.topbarcontent a {
+    text-decoration: none;
+}
+.bottombar{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #07000f;
+    color: white;
+    padding: 20px 1px;
+    z-index: 501;
+    display: flex;
+}
+.bottombarcontent {
+    user-select: none;
+    display: flex;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    align-items: center;
+}
+.topbartext {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+  transition: all 0.5s;
+}
+.topbartext:hover {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgb(12, 238, 0) 100%);
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+.topbarimg {
+    width: 300px;
+    transition: all 0.5s;
+    user-select: none;
+}
+.topbarimg:hover {
+    width: 350px;
+    height: 60px;
+}
+.empty {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.5s;
+  user-select: none;
+}
+.padding {
+  align-items: center;
+}
+@keyframes infiniteRGB {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.rgb {
+  animation: infiniteRGB 3s linear infinite;
+}
+.gwimg {
+  width : 400px;
+  height : 400px;
+
+}
+.gwtext {
+  width : 400px;
+  height : 140px;
+
+}
+.image-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; 
+    padding-left: 120px;
+    
+}
+.image-container2 {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; 
+    padding-left: 120px;
+}
+.image-container67 {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; 
+    padding-left: 120px;
+    margin-bottom: 80px;
+}
+.gwbutton {
+
+    background-color: #0e011f;
+    border: none;
+    padding: 15px 32px;
+    font-size: xx-large;
+    color: rgb(0, 217, 255);
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+    clip-path: polygon(9% 100%, 86% 100%, 100% 0, 0 0);
+    margin-top: 10px;
+}
+
+.gwbutton::before {
+    content: '';
+    clip-path: polygon(9% 100%, 86% 100%, 100% 0, 0 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-image: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.gwbutton:hover::before {
+    opacity: 1;
+}
+.gwbutton:hover {
+    color: black;
+    cursor: pointer;
+}
+.purple-box {
+    background-color: #0e011f;  
+    border-radius: 15px;       
+    padding-top: 20px;
+    padding-left: 30px;            
+    color: #00fff2;
+    margin-top: 10px;             
+}
+.gwpad {
+ height: 50px;
+ width: 370px;
+ display: flex;
+}
+.gwover {
+
+    background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(255, 0, 98, 1) 100%);
+    background-clip: border-box;
+    color: transparent;
+    border: none;
+    padding: 15px 32px;
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+    clip-path: polygon(9% 100%, 86% 100%, 100% 0, 0 0);
+    margin-top: 10px;
+}
+.font4 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.826); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#text{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  user-select: none;
+}
+#caseimg {
+  
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+@keyframes CountDown {
+  0% {
+    opacity: 0%;
+    width: 600px;
+    height: 600px;
+
+  }
+  1% {
+    opacity: 100%;
+    width: 600px;
+    height: 600px;
+
+  }
+  60% {
+    opacity: 0%;
+    
+  }
+  100% {
+    opacity: 0%;
+    width: 1px;
+    height: 1px;
+  }
+}
+.element {
+  top: 25%;
+  left: 33%;
+  position: absolute;
+  animation: CountDown 1s 1 forwards;
+  width: 400px;
+  height: 400px;
+}
+.element2 {
+  top: 25%;
+  left: 33%;
+  position: absolute;
+  animation: CountDown 1s 1 forwards;
+  animation-delay: 2s;
+  width: 400px;
+  height: 400px;
+}
+.countdown-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.countdown-number {
+  padding-top: 40%;
+  position: absolute;
+  font-size: 300px;
+  opacity: 0; /* Start hidden */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#three {
+    animation: fadeOut 1s 0s 1 forwards;
+    color:#00fff2
+}
+
+#two {
+    animation: fadeOut 1s 1s 1 forwards;
+    color:crimson
+}
+
+#one {
+    animation: fadeOut 1s 2s 1 forwards;
+    color:gold
+}
+#rickrollimg {
+  display: grid;
+  place-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  height: 30%;
+  width: 30%;
+  margin: auto
+}
+#rickrollimg:hover {
+  display: grid;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  place-items: center; 
+  padding-top: 80px;
+  height: 30%;
+  width: 30%;
+  cursor: pointer;
+}
