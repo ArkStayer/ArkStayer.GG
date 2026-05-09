@@ -152,12 +152,14 @@ function selectRarity6() {
     if (random <= sum) return rarity;
   }
 }
-
-
 document.getElementById("case1").onclick = async function() {
     if (money <= 0) {
+      document.getElementById("one").style.display = "none";
+      document.getElementById("two").style.display = "none";
+      document.getElementById("three").style.display = "none";
       document.getElementById("moneytext").textContent = "0$";
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("text").style.display= "block";
       document.getElementById("text").textContent = "You Dont Have Enough Money.";
       document.body.style.overflow = 'hidden';
       document.getElementById("overlay").onclick = function() {
@@ -167,6 +169,9 @@ document.getElementById("case1").onclick = async function() {
     }
 
     else {
+      document.getElementById("one").style.display = "block";
+      document.getElementById("two").style.display = "block";
+      document.getElementById("three").style.display = "block";
       document.body.style.overflow = 'hidden';
       const oldimg = document.getElementById("caseimg")
       const oldtext = document.getElementById("text")
@@ -259,8 +264,12 @@ document.getElementById("case1").onclick = async function() {
 }
 document.getElementById("case2").onclick = async function() {
     if (money <= 0) {
+      document.getElementById("one").style.display = "none";
+      document.getElementById("two").style.display = "none";
+      document.getElementById("three").style.display = "none";
       document.getElementById("moneytext").textContent = "0$";
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("text").style.display= "block";
       document.getElementById("text").textContent = "You Dont Have Enough Money.";
       document.body.style.overflow = 'hidden';
       document.getElementById("overlay").onclick = function() {
@@ -270,6 +279,9 @@ document.getElementById("case2").onclick = async function() {
     }
 
     else {
+      document.getElementById("one").style.display = "block";
+      document.getElementById("two").style.display = "block";
+      document.getElementById("three").style.display = "block";
       document.body.style.overflow = 'hidden';
       const oldimg = document.getElementById("caseimg")
       const oldtext = document.getElementById("text")
@@ -362,8 +374,12 @@ document.getElementById("case2").onclick = async function() {
 }
 document.getElementById("case3").onclick = async function() {
     if (money <= 0) {
+      document.getElementById("one").style.display = "none";
+      document.getElementById("two").style.display = "none";
+      document.getElementById("three").style.display = "none";
       document.getElementById("moneytext").textContent = "0$";
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("text").style.display= "block";
       document.getElementById("text").textContent = "You Dont Have Enough Money.";
       document.body.style.overflow = 'hidden';
       document.getElementById("overlay").onclick = function() {
@@ -373,6 +389,9 @@ document.getElementById("case3").onclick = async function() {
     }
 
     else {
+      document.getElementById("one").style.display = "block";
+      document.getElementById("two").style.display = "block";
+      document.getElementById("three").style.display = "block";
       document.body.style.overflow = 'hidden';
       const oldimg = document.getElementById("caseimg")
       const oldtext = document.getElementById("text")
@@ -465,8 +484,12 @@ document.getElementById("case3").onclick = async function() {
 }
 document.getElementById("case4").onclick = async function() {
     if (money <= 0) {
+      document.getElementById("one").style.display = "none";
+      document.getElementById("two").style.display = "none";
+      document.getElementById("three").style.display = "none";
       document.getElementById("moneytext").textContent = "0$";
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("text").style.display= "block";
       document.getElementById("text").textContent = "You Dont Have Enough Money.";
       document.body.style.overflow = 'hidden';
       document.getElementById("overlay").onclick = function() {
@@ -476,109 +499,9 @@ document.getElementById("case4").onclick = async function() {
     }
 
     else {
-      document.body.style.overflow = 'hidden';
-      const oldimg = document.getElementById("caseimg")
-      const oldtext = document.getElementById("text")
-      if (oldtext === null){
-        await sleep(100)
-      }
-      else {
-      oldtext.remove();
-      }
-      if (oldimg === null){
-        await sleep(100)
-      }
-      else {
-      oldimg.remove();
-      }
-      document.getElementById("overlay").style.display = "block";
-      await sleep(3000)
-        document.getElementById("overlay").onclick = function() {
-          const oldimg = document.getElementById("caseimg")
-          const oldtext = document.getElementById("text")
-          oldimg.remove();
-          oldtext.remove()
-          document.getElementById("overlay").style.display = "none";
-          document.body.style.overflow = 'auto';
-        }
-      money = money - 500
-      const rarity = selectRarity();
-      const skinList = skins4[rarity];
-      const randomSkin = skinList[Math.floor(Math.random() * skinList.length)];
-      console.log(rarity)
-      AddMoney(rarity)
-
-      localStorage.setItem('money', money)
-      document.getElementById("moneytext").textContent = money + "$";
-      if (rarity === "red") {
-        const text = document.createElement("h1")
-        text.setAttribute("id", "text");
-      
-        const container = document.getElementById('overlay');
-        container.appendChild(text);
-        document.getElementById("text").style.color = "red";
-        document.getElementById("text").textContent = "You Got A :  " + randomSkin;
-      }
-      if (rarity === "blue") {
-        const text = document.createElement("h1")
-        text.setAttribute("id", "text");
-      
-        const container = document.getElementById('overlay');
-        container.appendChild(text);
-        document.getElementById("text").style.color = "blue";
-        document.getElementById("text").textContent = "You Got A :  " + randomSkin;
-      }
-      if (rarity === "pink") {
-        const text = document.createElement("h1")
-        text.setAttribute("id", "text");
-      
-        const container = document.getElementById('overlay');
-        container.appendChild(text);
-        document.getElementById("text").style.color = "pink";
-        document.getElementById("text").textContent = "You Got A :  " + randomSkin;
-      }
-      if (rarity === "purple") {
-        const text = document.createElement("h1")
-        text.setAttribute("id", "text");
-      
-        const container = document.getElementById('overlay');
-        container.appendChild(text);
-        document.getElementById("text").style.color = "purple";
-        document.getElementById("text").textContent = "You Got A :  " + randomSkin;
-      }
-      if (rarity === "gold") {
-        const text = document.createElement("h1")
-        text.setAttribute("id", "text");
-      
-        const container = document.getElementById('overlay');
-        container.appendChild(text);
-        document.getElementById("text").style.color = "gold";
-        document.getElementById("text").textContent = "You Got A :  " + randomSkin;
-      }
-      const img = document.createElement('img');
-      img.src = `images/caseimgs/${randomSkin}.png`;
-      img.setAttribute("id", "caseimg");
-      
-      const container = document.getElementById('overlay');
-      container.appendChild(img);
-
-      document.body.style.overflow = 'hidden';
-    
-    }
-}
-document.getElementById("case4").onclick = async function() {
-    if (money <= 0) {
-      document.getElementById("moneytext").textContent = "0$";
-      document.getElementById("overlay").style.display = "block";
-      document.getElementById("text").textContent = "You Dont Have Enough Money.";
-      document.body.style.overflow = 'hidden';
-      document.getElementById("overlay").onclick = function() {
-        document.getElementById("overlay").style.display = "none";
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    else {
+      document.getElementById("one").style.display = "block";
+      document.getElementById("two").style.display = "block";
+      document.getElementById("three").style.display = "block";
       document.body.style.overflow = 'hidden';
       const oldimg = document.getElementById("caseimg")
       const oldtext = document.getElementById("text")
@@ -671,8 +594,12 @@ document.getElementById("case4").onclick = async function() {
 }
 document.getElementById("case5").onclick = async function() {
     if (money <= 0) {
+      document.getElementById("one").style.display = "none";
+      document.getElementById("two").style.display = "none";
+      document.getElementById("three").style.display = "none";
       document.getElementById("moneytext").textContent = "0$";
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("text").style.display= "block";
       document.getElementById("text").textContent = "You Dont Have Enough Money.";
       document.body.style.overflow = 'hidden';
       document.getElementById("overlay").onclick = function() {
@@ -682,6 +609,9 @@ document.getElementById("case5").onclick = async function() {
     }
 
     else {
+      document.getElementById("one").style.display = "block";
+      document.getElementById("two").style.display = "block";
+      document.getElementById("three").style.display = "block";
       document.body.style.overflow = 'hidden';
       const oldimg = document.getElementById("caseimg")
       const oldtext = document.getElementById("text")
@@ -774,8 +704,12 @@ document.getElementById("case5").onclick = async function() {
 }
 document.getElementById("case6").onclick = async function() {
     if (money <= 0) {
+      document.getElementById("one").style.display = "none";
+      document.getElementById("two").style.display = "none";
+      document.getElementById("three").style.display = "none";
       document.getElementById("moneytext").textContent = "0$";
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("text").style.display= "block";
       document.getElementById("text").textContent = "You Dont Have Enough Money.";
       document.body.style.overflow = 'hidden';
       document.getElementById("overlay").onclick = function() {
@@ -785,6 +719,9 @@ document.getElementById("case6").onclick = async function() {
     }
 
     else {
+      document.getElementById("one").style.display = "block";
+      document.getElementById("two").style.display = "block";
+      document.getElementById("three").style.display = "block";
       document.body.style.overflow = 'hidden';
       const oldimg = document.getElementById("caseimg")
       const oldtext = document.getElementById("text")
@@ -811,7 +748,7 @@ document.getElementById("case6").onclick = async function() {
           document.body.style.overflow = 'auto';
         }
       money = money - 500
-      const rarity = selectRarity6();
+      const rarity = selectRarity();
       const skinList = skins6[rarity];
       const randomSkin = skinList[Math.floor(Math.random() * skinList.length)];
       console.log(rarity)
