@@ -111,13 +111,8 @@ this.skins5 = {
   gold: ["Classic Knife Crimson Web", "Classic Knife Fade"]
 };
 
-this.skins6 = {
-  white: [],      
-  lightblue: [],  
-  blue: ["MP7 Skulls"],
-  purple: [],  
-  pink: [],       
-  red: [],      
+this.skins6 =  
+  blue: ["MP7 Skulls"]      
   gold: ["Butterfly Knife Gamma Doppler"]
 };
 
