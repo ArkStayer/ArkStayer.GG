@@ -748,7 +748,7 @@ document.getElementById("case6").onclick = async function() {
           document.body.style.overflow = 'auto';
         }
       money = money - 500
-      const rarity = selectRarity();
+      const rarity = selectRarity6();
       const skinList = skins6[rarity];
       const randomSkin = skinList[Math.floor(Math.random() * skinList.length)];
       console.log(rarity)
