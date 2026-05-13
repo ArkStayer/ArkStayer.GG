@@ -112,7 +112,7 @@ this.skins5 = {
 };
 
 this.skins6 =  
-  blue: ["MP7 Skulls"]      
+  blue: ["MP7 Skulls"],    
   gold: ["Butterfly Knife Gamma Doppler"]
 };
 
